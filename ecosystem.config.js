@@ -23,7 +23,7 @@ module.exports = {
         host : '47.107.74.126',
         ref  : 'origin/master',
         port : '12178',
-        repo : 'git@github.com:wf-yrx/express-test.git',
+        repo : 'git@github.com:wf-yrx/express-vue.git',
         path : '/home/yueyagou/www/wf',
         'post-deploy' : 'git pull && npm install && pm2 reload ecosystem.config.js --env production',
     }
