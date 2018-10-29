@@ -43,6 +43,9 @@ router.all("*", function (req, res, next) {
         formData: formData
     }, function (error, response, body) {
          if (!error && response.statusCode === 200) {
+             if (body.data && body.data.token) {
+                  req.session.token = body.data.token;
+             }
             res.send(body);
          } else {
             console.log('配置错误');
