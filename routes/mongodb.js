@@ -37,7 +37,7 @@ router.get('/findOne',function(req,res,next){
 
 router.get('/insertOne',function(req,res,next){
     // console.log('获取前端的请求参数',req.query);
-    operatorDB.insertOne('wfdb','wfCollection',{'name':req.query.name,'age':parseInt(req.query.age)},(err,content)=>{
+    operatorDB.insertOne('wfdb','wfCollection',{'name':req.query.name,'age':req.query.age},(err,content)=>{
         // operatorDB.insertOne('xrr','xrrCollection',{'name':req.query.name,'age':parseInt(req.query.age)},(err,content)=>{
         if(!err){
             res.json(content);
