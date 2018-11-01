@@ -13,11 +13,14 @@ var mongodb = require('./routes/mongodb');
 // var db = require('./modules/db');
 // db();
 
+var ejs = require('ejs');
+
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.engine('html', ejs.__express);
+app.set('view engine', 'html');
 
 app.use(logger('dev'));
 app.use(express.json());
